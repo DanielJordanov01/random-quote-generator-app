@@ -20,6 +20,7 @@ class App extends Component {
   }
 
   clickHandler = () => {
+    // when clicked adds a quote to the state
     axios
       .get("https://talaikis.com/api/quotes/random/")
       .then(res => this.setState({ quote: [res.data] }));
